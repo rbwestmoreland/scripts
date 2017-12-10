@@ -5,7 +5,7 @@
 echo ----------------------------------------
 echo Updating scripts...
 echo ----------------------------------------
-sudo git -C /usr/bin/rbwestmoreland/ pull
+git -C /usr/bin/rbwestmoreland/ pull
 
 echo ----------------------------------------
 echo Complete!
