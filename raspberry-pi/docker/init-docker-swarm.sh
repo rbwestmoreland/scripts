@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Initializes a Docker Swarm on a Raspbian distribution.
+# https://howchoo.com/g/njy4zdm3mwy/how-to-run-a-raspberry-pi-cluster-with-docker-swarm
 
 command_exists() {
 	command -v "$@" > /dev/null 2>&1
@@ -19,7 +20,6 @@ fi
 echo ----------------------------------------
 echo Initializing Docker Swarm...
 echo ----------------------------------------
-# https://howchoo.com/g/njy4zdm3mwy/how-to-run-a-raspberry-pi-cluster-with-docker-swarm
 docker swarm init
 docker swarm join-token manager
 docker service create \
