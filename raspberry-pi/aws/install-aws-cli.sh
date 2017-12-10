@@ -22,9 +22,8 @@ apt-get -y install python-pip
 echo ----------------------------------------
 echo Installing AWS CLI...
 echo ----------------------------------------
-if ! command_exists aws; then
-    pip install awscli --upgrade --user
-fi
+pip install awscli --upgrade --user
+command_exists aws || export PATH=$PATH:~/.local/bin
 aws configure
 
 echo ----------------------------------------
