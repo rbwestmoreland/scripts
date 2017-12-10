@@ -1,2 +1,2 @@
-# Docker on Raspberry Pi
-A collection of various scripts.
+# Scripts
+A collection of useful scripts.

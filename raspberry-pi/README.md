@@ -1,5 +1,5 @@
 # Raspberry Pi
-A collection of various scripts for Raspberry Pi.
+A collection of scripts for Raspberry Pi.
 
 ## How to Run?
 - SSH into your Raspberry Pi

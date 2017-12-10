@@ -22,18 +22,12 @@ echo Initializing Docker Swarm...
 echo ----------------------------------------
 docker swarm init
 docker swarm join-token manager
-docker service create \
-        --name visualizer \
-        --publish 8080:8080/tcp \
-        --constraint node.role==manager \
-        --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
-        alexellis2/visualizer-arm:latest
 
 echo ----------------------------------------
 echo Docker Swarm Initialized
 echo ----------------------------------------
-echo "Run the `docker swarm join` commands above on the other swarm nodes."
-echo "Once swarm nodes have joined. Run `docker node ls` to confirm nodes."
+echo "  - Run the `docker swarm join` commands above on the other swarm nodes."
+echo "  - Once swarm nodes have joined. Run `docker node ls` to confirm nodes."
 
 echo ----------------------------------------
 echo Complete!
