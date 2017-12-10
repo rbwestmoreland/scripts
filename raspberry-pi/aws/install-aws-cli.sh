@@ -2,6 +2,10 @@
 
 # Installs AWS CLI on a Raspbian distribution.
 
+command_exists() {
+	command -v "$@" > /dev/null 2>&1
+}
+
 echo ----------------------------------------
 echo Updating...
 echo ----------------------------------------
@@ -18,7 +22,9 @@ apt-get -y install python-pip
 echo ----------------------------------------
 echo Installing AWS CLI...
 echo ----------------------------------------
-pip install awscli --upgrade --user
+if ! command_exists aws; then
+    pip install awscli --upgrade --user
+fi
 aws configure
 
 echo ----------------------------------------
