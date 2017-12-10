@@ -24,6 +24,10 @@ echo Installing AWS CLI...
 echo ----------------------------------------
 pip install awscli --upgrade --user
 command_exists aws || export PATH=$PATH:~/.local/bin
+
+echo ----------------------------------------
+echo Configuring AWS CLI...
+echo ----------------------------------------
 aws configure
 
 echo ----------------------------------------

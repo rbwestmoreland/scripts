@@ -10,16 +10,20 @@ echo ----------------------------------------
 echo Verifying Docker Installation...
 echo ----------------------------------------
 if ! command_exists docker; then
-    echo 'Docker not yet installed.'
+    echo 'Docker install not found!'
     echo 'Please install Docker before running this script.'
+else
+    echo 'Docker install found.'
 fi
 
 echo ----------------------------------------
 echo Verifying AWS CLI Installation...
 echo ----------------------------------------
 if ! command_exists aws; then
-    echo 'AWS CLI not yet installed.'
+    echo 'AWS CLI install not found!'
     echo 'Please install AWS CLI before running this script.'
+else
+    echo 'AWS CLI install found.'
 fi
 
 echo ----------------------------------------
