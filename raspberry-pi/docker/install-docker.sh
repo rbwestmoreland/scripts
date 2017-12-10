@@ -22,13 +22,20 @@ apt-get -y install samba
 echo ----------------------------------------
 echo Installing Docker...
 echo ----------------------------------------
-if ! command_exists docker; then
+if command_exists docker; then
+    echo "Docker is already installed!"
+else
     curl -sSL https://get.docker.com | sh
     systemctl enable docker
     systemctl start docker
     usermod -aG docker pi
 fi
+
+echo ----------------------------------------
+echo Verifying Docker...
+echo ----------------------------------------
 docker --version
+docker run hello-world
 
 echo ----------------------------------------
 echo Complete!

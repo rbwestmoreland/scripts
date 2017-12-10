@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Register an AWS ECR repository with Docker.
+# Initializes a Docker Swarm on a Raspbian distribution.
 
 command_exists() {
 	command -v "$@" > /dev/null 2>&1
@@ -17,20 +17,23 @@ else
 fi
 
 echo ----------------------------------------
-echo Verifying AWS CLI Installation...
+echo Initializing Docker Swarm...
 echo ----------------------------------------
-if ! command_exists aws; then
-    echo "AWS CLI install not found!"
-    echo "Please install AWS CLI before running this script."
-else
-    echo "AWS CLI install found."
-fi
+# https://howchoo.com/g/njy4zdm3mwy/how-to-run-a-raspberry-pi-cluster-with-docker-swarm
+docker swarm init
+docker swarm join-token manager
+docker service create \
+        --name visualizer \
+        --publish 8080:8080/tcp \
+        --constraint node.role==manager \
+        --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+        alexellis2/visualizer-arm:latest
 
 echo ----------------------------------------
-echo Installing AWS ECR Registry...
+echo Docker Swarm Initialized
 echo ----------------------------------------
-read -p "AWS ECR Region: " AWS_ECR_REGION
-aws ecr get-login --no-include-email --region $AWS_ECR_REGION | sh
+echo "Run the `docker swarm join` commands above on the other swarm nodes."
+echo "Once swarm nodes have joined. Run `docker node ls` to confirm nodes."
 
 echo ----------------------------------------
 echo Complete!

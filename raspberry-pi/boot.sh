@@ -1,11 +1,12 @@
 #!/bin/sh
 
-# git pull this repo on a Raspbian distribution.
+# Boot script for a Raspbian distribution.
+# Install this using init.sh
 
 echo ----------------------------------------
 echo Updating scripts...
 echo ----------------------------------------
-git -C /usr/bin/rbwestmoreland/ pull
+git -C /usr/bin/rbwestmoreland/scripts pull
 
 echo ----------------------------------------
 echo Complete!
