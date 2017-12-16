@@ -16,6 +16,11 @@ echo ----------------------------------------
 apt-get -y install git
 
 echo ----------------------------------------
+echo Installing samba...
+echo ----------------------------------------
+apt-get -y install samba
+
+echo ----------------------------------------
 echo Installing rbwestmoreland/scripts...
 echo ----------------------------------------
 rm -rf /usr/bin/rbwestmoreland/scripts
