@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Binds the Docker daemon to tcp socket for remote access.
+# https://coreos.com/os/docs/latest/customizing-docker.html
 
 echo ----------------------------------------
 echo Creating /etc/systemd/system/docker-tcp.socket
