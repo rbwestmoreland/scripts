@@ -5,7 +5,7 @@
 echo ----------------------------------------
 echo Updating...
 echo ----------------------------------------
-apt-get -y update 
+apt-get -y update
 apt-get -y upgrade
 apt-get autoremove
 apt-get autoclean
