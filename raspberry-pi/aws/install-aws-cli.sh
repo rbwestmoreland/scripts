@@ -23,7 +23,7 @@ echo ----------------------------------------
 echo Installing AWS CLI...
 echo ----------------------------------------
 pip install awscli --upgrade --user
-if ! [ command_exists aws ]; then
+if ! command_exists aws; then
     export PATH=$PATH:~/.local/bin
 	grep -q "export PATH=$PATH:~/.local/bin" ~/.bashrc || echo '
 
