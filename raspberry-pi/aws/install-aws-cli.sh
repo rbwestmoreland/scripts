@@ -25,10 +25,12 @@ echo ----------------------------------------
 pip install awscli --upgrade --user
 if ! command_exists aws; then
     export PATH=$PATH:~/.local/bin
-	grep -q "#AWS CLI" ~/.bashrc || echo '
+    grep -q "#AWS CLI" ~/.bashrc || echo '
 
 #AWS CLI
 export PATH=$PATH:~/.local/bin' >> ~/.bashrc
+
+    source ~/.bashrc
 fi
 
 echo ----------------------------------------
@@ -38,12 +40,8 @@ if ! command_exists aws; then
     echo "AWS CLI install failed!"
 else
     echo "AWS CLI install succeeded."
+	echo "Please run 'aws configure' to complete the installation."
 fi
-
-echo ----------------------------------------
-echo Configuring AWS CLI...
-echo ----------------------------------------
-aws configure
 
 echo ----------------------------------------
 echo Complete!
