@@ -31,8 +31,8 @@ grep -q "/usr/bin/rbwestmoreland/scripts/boot.sh" /etc/rc.local || sed -i -e '$i
 echo ----------------------------------------
 echo Configuring Raspberry Pi...
 echo ----------------------------------------
-bash "/usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh"
-bash "/usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh"
+/usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh
+/usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh
 
 echo ----------------------------------------
 echo Complete!
