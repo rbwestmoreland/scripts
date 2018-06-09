@@ -33,11 +33,11 @@ echo ----------------------------------------
 echo Configuring Raspberry Pi...
 echo ----------------------------------------
 configure () {
-  /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh
+  . /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh
 }
 
 reboot () {
-  /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh
+  . /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh
 }
 
 configure
