@@ -32,8 +32,8 @@ find /usr/bin/rbwestmoreland/scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
 echo ----------------------------------------
 echo Configuring Raspberry Pi...
 echo ----------------------------------------
-temp=$(/usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh)
-temp=$(source /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh)
+$(source /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh)
+$(source /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh)
 
 echo ----------------------------------------
 echo Complete!
