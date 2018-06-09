@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x
 
 # git clone this repo and install boot.sh on a Raspbian distribution.
 
@@ -31,11 +32,8 @@ find /usr/bin/rbwestmoreland/scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
 echo ----------------------------------------
 echo Configuring Raspberry Pi...
 echo ----------------------------------------
-echo 1
 . /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/configure.sh
-echo 2
 . /usr/bin/rbwestmoreland/scripts/raspberry-pi/raspbian/reboot.sh
-echo 3
 
 echo ----------------------------------------
 echo Complete!
