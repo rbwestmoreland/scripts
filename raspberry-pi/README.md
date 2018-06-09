@@ -3,8 +3,8 @@ A collection of scripts for Raspberry Pi.
 
 ## How to install?
 - SSH into your Raspberry Pi
-- Execute: `curl -s https://raw.githubusercontent.com/rbwestmoreland/scripts/master/raspberry-pi/init.sh | sudo bash`
+- Execute: `curl -s https://raw.githubusercontent.com/rbwestmoreland/scripts/master/raspberry-pi/install.sh | sudo bash`
 
-## How to Run?
-- SSH into your Raspberry Pi
-- Execute: `sudo bash /usr/bin/rbwestmoreland/scripts/<script>.sh`
+## What scripts are available?
+- init.sh `sudo bash /usr/bin/rbwestmoreland/scripts/raspberry-pi/init.sh`
+- install-docker.sh `sudo bash /usr/bin/rbwestmoreland/scripts/raspberry-pi/docker/install-docker.sh`
