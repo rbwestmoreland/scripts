@@ -1,11 +1,8 @@
 #!/bin/sh
+set -x
 
 # Configure Raspbain without entering raspi-config.
 # https://raspberrypi.stackexchange.com/questions/28907/how-could-one-automate-the-raspbian-raspi-config-setup
-
-echo ----------------------------------------
-echo Configuring...
-echo ----------------------------------------
 
 read -p "Hostname: [$HOSTNAME] " PI_HOSTNAME
 PI_HOSTNAME=${PI_HOSTNAME:-$HOSTNAME}
