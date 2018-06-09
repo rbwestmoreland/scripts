@@ -1,7 +1,4 @@
 #!/bin/sh
-set -x
-
-# git clone this repo and install boot.sh on a Raspbian distribution.
 
 echo ----------------------------------------
 echo Updating...
