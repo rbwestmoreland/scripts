@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 
 # Configure Raspbain without entering raspi-config.
 # https://raspberrypi.stackexchange.com/questions/28907/how-could-one-automate-the-raspbian-raspi-config-setup

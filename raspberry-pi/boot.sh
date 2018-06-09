@@ -1,12 +1,13 @@
 #!/bin/sh
 
-# Boot script for a Raspbian distribution.
-# Install this using init.sh
-
 echo ----------------------------------------
 echo Updating scripts...
 echo ----------------------------------------
+
+# get latest
 git -C /usr/bin/rbwestmoreland/scripts pull
+
+# make scripts executable
 find /usr/bin/rbwestmoreland/scripts/ -type f -iname "*.sh" -exec chmod +x {} \;
 
 echo ----------------------------------------
